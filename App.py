@@ -6,12 +6,20 @@ from sklearn.preprocessing import StandardScaler
 # Load pre-trained credit risk model
 @st.cache_data
 def load_model():
-    return LogisticRegression()
+    model = LogisticRegression()
+    # Assuming you have a dataset named 'data' containing features and target
+    data = pd.read_csv("your_data.csv")  # Load your data here
+    X = data.drop(columns=["target_column"])
+    y = data["target_column"]
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+    model.fit(X_scaled, y)
+    return model
 
 # Function to assess credit risk
 def assess_credit_risk(model, features):
     scaler = StandardScaler()
-    scaled_features = scaler.fit_transform(features)
+    scaled_features = scaler.transform(features)
     risk_probability = model.predict_proba(scaled_features)[:, 1]
     return risk_probability
 
