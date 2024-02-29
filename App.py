@@ -4,13 +4,12 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 
 # Load pre-trained credit risk model
-@st.cache
+@st.cache_data
 def load_model():
     return LogisticRegression()
 
 # Function to assess credit risk
-def assess_credit_risk(features):
-    model = load_model()
+def assess_credit_risk(model, features):
     scaler = StandardScaler()
     scaled_features = scaler.fit_transform(features)
     risk_probability = model.predict_proba(scaled_features)[:, 1]
@@ -32,6 +31,9 @@ def main():
     # Convert credit history to numerical representation
     credit_history_map = {"Good": 2, "Fair": 1, "Poor": 0}
     
+    # Load model
+    model = load_model()
+    
     # Predict credit risk
     if st.button("Assess Credit Risk"):
         features = pd.DataFrame({
@@ -42,7 +44,7 @@ def main():
             "Credit_History": [credit_history_map[credit_history]],
             "Loan_Amount": [loan_amount]
         })
-        risk_probability = assess_credit_risk(features)
+        risk_probability = assess_credit_risk(model, features)
         st.write("Credit Risk Probability:", risk_probability)
 
 if __name__ == "__main__":
