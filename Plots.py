@@ -1,5 +1,5 @@
 __author__ = 'Arkady Dushatsky'
-import pylab as pl
+import matplotlib.pyplot as pl
 from sklearn.metrics import roc_curve, auc
 
 def plot_auc(y_test, probas_):
