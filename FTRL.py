@@ -8,7 +8,7 @@ import collections
 from operator import itemgetter
 
 import numpy as np
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 # parameters 
 from sklearn.isotonic import IsotonicRegression
 
