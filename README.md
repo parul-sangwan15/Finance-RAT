@@ -2,7 +2,7 @@
  Developing a risk assessment tool involves creating a simple application that allows users to input relevant information and provides an assessment of different types of financial risks.
 # Financial Risk Assessment Tool
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMm40dXU3aWg3cHU2bDQ2MXFleWo1dWVndnljcnpobjIybmd6bWpkMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/82s2mLFUponaYgvDeY/giphy.gif" height="350"`>
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMm40dXU3aWg3cHU2bDQ2MXFleWo1dWVndnljcnpobjIybmd6bWpkMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/82s2mLFUponaYgvDeY/giphy.gif" height="200"`/>
 ## Overview
 This project aims to develop an interactive web application for assessing various financial risks beyond credit risk, including operational and other types. The application allows users to input financial parameters such as income, expenses, assets, liabilities, credit history, and other relevant factors. It utilizes machine learning models trained to predict different types of financial risks, providing users with comprehensive risk assessments. The tool aids financial institutions and individuals in making informed decisions regarding risk management and financial planning.
 
